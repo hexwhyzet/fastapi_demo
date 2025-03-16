@@ -1,0 +1,5 @@
+sqlmodel~=0.0.24
+fastapi~=0.115.11
+pydantic~=2.10.6
+uvicorn~=0.34.0
+psycopg2~=2.9.10
