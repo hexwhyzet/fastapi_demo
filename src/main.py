@@ -17,11 +17,6 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello from Docker!"}
-
-
 @app.post("/tasks/", response_model=TaskRead)
 def add_task(task: TaskCreate, session: Session = Depends(get_session)):
     return create_task(session, task)
